@@ -1,26 +1,31 @@
 {
-  "name": "test-cs-webapp",
-  "version": "0.1.0",
-  "homepage": "https://github.com/Squirrel-Island/SonnyJimEngine",
-  "author": {
-    "name": "Squirrel Island",
-    "url": "http://carrotisland.nicklaroux.com/"
+  "devDependencies": {
+    "browser-sync": "^1.2.1",
+    "coffeeify": "^0.6.0",
+    "gulp": "^3.8.6",
+    "gulp-browserify": "^0.5.0",
+    "gulp-concat": "^2.3.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^0.3.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/Squirrel-Island/SonnyJimEngine.git"
-  },
-  "description": "Testing out Grunt, CoffeeScript, and more.",
+  "name": "SonnyJimEngine",
+  "description": "SonnyJimEngine ==============",
+  "version": "0.0.0",
   "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.8.6"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Nicholas La Roux",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Squirrel-Island/SonnyJimEngine.git"
+  },
+  "author": "Rob Whitaker",
   "license": "MIT",
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-coffee": "^0.10.1",
-    "grunt-contrib-uglify": "^0.5.0",
-    "grunt-contrib-watch": "^0.6.1"
-  }
+  "bugs": {
+    "url": "https://github.com/Squirrel-Island/SonnyJimEngine/issues"
+  },
+  "homepage": "https://github.com/Squirrel-Island/SonnyJimEngine"
 }
