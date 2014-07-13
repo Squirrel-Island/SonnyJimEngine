@@ -4,7 +4,9 @@ var gulp        = require('gulp'),
     rename      = require('gulp-rename'),
     uglify      = require('gulp-uglify'),
     browserSync = require('browser-sync'),
-    concat      = require('gulp-concat');
+    concat      = require('gulp-concat'),
+    gutil       = require('gulp-util'),
+    rimraf      = require('gulp-rimraf');
 
 gulp.task('default', ['coffee-compile','template-compile','style-compile','assets-compile','browser-sync','watch']);
 
@@ -14,6 +16,7 @@ gulp.task('coffee-compile', function() {
       transform: ['coffeeify'],
       extensions: ['.coffee']
     }))
+    .on('error', function(err) { gutil.log(err.message); })
     .pipe(uglify())
     .pipe(rename('SonnyJim.js'))
     .pipe(gulp.dest('webapp-build/js'))
@@ -55,3 +58,8 @@ gulp.task('browser-sync', function() {
         }
     });
 });
+
+gulp.task('clean', function() {
+    gulp.src('webapp-build', { read: false })
+        .pipe(rimraf());
+})
