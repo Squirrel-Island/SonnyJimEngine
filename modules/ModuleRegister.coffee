@@ -1,4 +1,3 @@
 module.exports = [
-    'TestModule'
-    'AnotherModule'
+    {name: 'InputRouter', module: require('./InputRouter')}
 ]
